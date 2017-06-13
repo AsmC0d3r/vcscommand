@@ -589,8 +589,8 @@ function!  s:IdentifyVCSType(buffer)
 			if level < bestLevel || bestLevel == 0
 				let matches = []
 				let bestLevel = level
+				call add(matches, vcsType)
 			endif
-			call add(matches, vcsType)
 		endif
 	endfor
 	if len(matches) == 1
